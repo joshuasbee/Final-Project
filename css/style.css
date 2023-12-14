@@ -1,0 +1,404 @@
+html{
+  box-sizing: border-box;
+}
+
+*, *:before, *:after{
+  box-sizing: inherit;
+}
+
+#wrapper {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 1em;
+}
+
+.plain_link {
+  /* to make the "My Account" look nicer only in the header */
+  font-family: 'Andale Mono';
+  color: #3a3a3a;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+input:required:invalid,
+input:focus:invalid {
+  background-image: url(/images/invalid.png);
+  background-position: right top;
+  background-repeat: no-repeat;
+}
+
+input:required:valid {
+  background-image: url(/images/valid.png);
+  background-position: right top;
+  background-repeat: no-repeat;
+}
+
+.center {
+  text-align: center;
+}
+
+header a {
+  text-decoration: none;
+  color: #3a3a3a;
+}
+
+.andale {
+  font-family: 'Andale Mono';
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+li a {
+  text-decoration: none;
+  color: white;
+}
+
+h2 a {
+  text-decoration: none;
+  color: black;
+}
+
+#flex {
+  display: flex;
+}
+
+#flex li {
+  padding-left: .5em;
+  padding-right: .5em;
+}
+
+.nobullet {
+  list-style: none;
+  padding: .5em;
+  color: white;
+  background-color: #3a3a3a;
+}
+
+.nobulletCLEAR {
+  list-style: none;
+  padding-left: 0em;
+}
+
+.darkText {
+  color: #3a3a3a;
+}
+
+hr {
+  background-color: #3a3a3a;
+  height: 2px;
+}
+
+#account {
+  padding: 1em;
+}
+
+footer {
+  text-align: center;
+  color: #3a3a3a;
+}
+
+figcaption {
+  color: black;
+}
+
+/* FROM TEACHER BELOW */
+main {
+  padding-left: .25rem;
+}
+
+#delorean {
+  background-image: url("/phpmotors/images/vehicles/1982-dmc-delorean.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position-x: center;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+}
+
+#delorean h2 {
+  margin-left: 0;
+}
+
+#delorean a:hover {
+  opacity: .5;
+}
+
+#delorean li {
+  list-style: none;
+  color: #4c96d7;
+}
+
+#delorean li h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #4c96d7;
+}
+
+#delorean ul {
+  padding-left: 0;
+  margin-top: 0;
+  max-width: 200px;
+  margin-left: .5em;
+  margin-bottom: 8em;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+#delorean li {
+  font-size: .85em;
+}
+
+#actionbtn {
+  display: none;
+}
+
+#actionbtn:hover {
+  opacity: .5;
+}
+
+.flex {
+  display: flex;
+  margin-bottom: 2em;
+  justify-content: center;
+  width: 100%;
+  padding-left: .25em;
+}
+
+.flex a {
+  width: 100%;
+}
+
+.add-col {
+  background-color: #4c96d7;
+  height: 5.5em;
+  width: 95%;
+  border: #3a3a3a solid 1px;
+}
+
+a figure {
+  margin: 0;
+}
+
+figure img {
+  display: block;
+  margin: auto;
+  padding-top: .5em;
+}
+
+figure figcaption {
+  text-align: center;
+}
+
+#review li {
+  font-size: .9em;
+  margin-bottom: 1em;
+}
+
+#inv-display{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+ }
+ 
+ #inv-display li{
+  margin-bottom: .5em;
+  border: 1px #ccc solid;
+  list-style-type: none;
+  flex: 1 1 auto;
+ }
+ 
+ #inv-display li img {
+     max-width: 100%;
+ }
+
+ .imageW {
+  width: 100%;
+  height: auto;
+}
+
+#pagination {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: space-around;
+}
+
+.disabled a {
+  visibility: hidden;
+}
+
+/* PC screens */
+@media only screen and (min-width: 768px) {
+  h1 {
+    font-size: 1.9em;
+  }
+
+  #delorean ul {
+    font-size: 1.6em;
+    margin-left: 2em;
+    margin-top: 1em;
+    margin-bottom: 15em;
+  }
+
+  #delorean {
+    background-size: contain;
+    margin-bottom: 0;
+  }
+
+  #actionbtn {
+    display: block;
+    width: 90%;
+    margin-top: 1.5em;
+  }
+
+  .flex-content {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  #review h2,
+  #add-ons h2 {
+    font-size: 1.4em;
+    margin-bottom: 2em;
+  }
+
+  #add-ons {
+    order: -1;
+  }
+
+  #review li {
+    font-size: 1.1em;
+  }
+
+  #add-ons {
+    width: 45%;
+  }
+
+  #add-ons,
+  #review {
+    margin-top: 0;
+  }
+
+  body {
+    background-image: url("/phpmotors/images/site/small_check.jpg");
+    background-size: cover;
+  }
+
+  #wrapper {
+    border: 5px solid #4c96d7;
+    border-radius: 10px;
+    margin-top: 1em;
+    width: 75%;
+    background-color: white;
+  }
+
+  header button {
+    background-color: transparent;
+    border: none;
+  }
+
+  /* For vehicle display in classification view */
+	#inv-display {
+		flex-flow: row wrap;
+		justify-content: flex-start;
+	}
+
+	#inv-display h2{
+		font-size: 1rem;
+	}
+
+	#inv-display li {
+		max-width: 200px;
+		flex: 1 0 auto;
+		text-align: center;
+		height: 250px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+      
+	#inv-display div {
+		width: 100%;
+	}
+
+  .imageW {
+    width: 100%;
+    height: auto;
+  }
+
+  /* GRID AREA STUFF */
+  .pic {
+    grid-area: pic;
+  }
+  .MandM {
+    grid-area: MandM;
+  }
+
+  .price {
+    grid-area: price;
+    padding-top: .5em;
+  }
+
+  .desc {
+    grid-area: desc;
+  }
+
+  .stock {
+    grid-area: stock;
+  }
+
+  .color {
+    grid-area: carColor;
+  }
+  .tn {
+    grid-area: tn;
+  }
+
+  #gridContainer {
+    display: grid;
+    column-gap: 1em;
+    grid-template-areas:
+    "tn pic price"
+    "tn pic desc"
+    "tn pic carColor"
+    "tn pic stock";
+  }
+
+  .listBlack li a{
+    color: black;
+    text-decoration: underline;
+  }
+
+  .zoom {
+    transition: transform .2s; /* Animation */
+    /* width: 200px;
+    height: 200px; */
+    width: 100px;
+    height: 100px;
+    /* margin: 0 auto; */
+  }
+  
+  .zoom:hover {
+    transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  }
+
+  #pagination {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: space-around;
+  }
+
+  .disabled a {
+    visibility: hidden;
+  }
+
+  .differentColor li {
+    color:red;
+  }
+}
